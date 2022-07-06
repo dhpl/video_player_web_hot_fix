@@ -76,13 +76,15 @@ class VideoPlayerPlugin extends VideoPlayerPlatform {
     final VideoElement videoElement = VideoElement()
       ..id = 'videoElement-$textureId'
       ..src = uri
+      ..autoplay = false
+      ..controls = false
       ..style.border = 'none'
       ..style.height = '100%'
       ..style.width = '100%';
 
-      // Allows Safari iOS to play the video inline
-    videoElement.setAttribute('playsinline', 'true');
-    videoElement.setAttribute('autoplay', 'true');
+    // Allows Safari iOS to play the video inline
+    // videoElement.setAttribute('playsinline', 'true');
+    // videoElement.setAttribute('autoplay', 'true');
 
     // TODO(hterkelsen): Use initialization parameters once they are available
     ui.platformViewRegistry.registerViewFactory(
