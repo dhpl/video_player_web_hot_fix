@@ -82,7 +82,7 @@ class VideoPlayerPlugin extends VideoPlayerPlatform {
 
       // Allows Safari iOS to play the video inline
     videoElement.setAttribute('playsinline', 'true');
-    videoElement.setAttribute('autoplay', 'false');
+    videoElement.setAttribute('autoplay', 'true');
 
     // TODO(hterkelsen): Use initialization parameters once they are available
     ui.platformViewRegistry.registerViewFactory(
